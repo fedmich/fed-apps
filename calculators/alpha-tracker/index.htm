@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title>Alpha Tracker Calculator</title>
+	
+	<!--
+	<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+	-->
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="calc.js"></script>
+	
+	<style type="text/css">
+	body{
+		margin:0;
+		padding:0;
+	}
+	h1{
+		margin:0 0 5px 0;
+		padding:0;
+	}
+	.hand{
+		cursor:pointer;
+	}
+	#surveyors{
+		width:60px;
+	}
+	#days{
+		width:60px;
+	}
+	#rate{
+		width:60px;
+	}
+	#writeup{
+		width:60px;
+	}
+	
+	.calc_page{
+		background-color : #DADFE4;
+		width:500px;
+		margin: 10px auto auto auto;
+		padding-bottom:2px;
+		
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+	}
+	.calc_page h1{
+		text-align:center;
+	}
+	.calc_page .box{
+		border:2px solid #4B76A2;
+		padding: 10px 5px 0px 5px;
+		margin-bottom:10px;
+	}
+	.calc_page .result_box{
+		background-color:#FFFFFF;
+		font-size:20px;
+		color:#96CA6D;
+		border:1px solid #666666;
+		padding: 5px;
+	}
+	.calc_page .result_box2{
+		color:#FF952E;
+	}
+	.calc_page th{
+		background-color:#4B76A2;
+	}
+	.calc_page td{
+		
+	}
+	</style>
+</head>
+<body>
+	<div class="calc_page">
+	<h1>Alpha Tracker Calculator</h1>
+	<table width="95%" border="0" align="center" cellpadding="2" cellspacing="0" class="box">
+          <tr>
+            <td width="76%">How    many surveyors do  you have?</td>
+            <td width="24%" align="center"><input type="number" id="surveyors" name="surveyors" value="" placeholder="Surveyos" class="input" /></td>
+          </tr>
+          <tr>
+            <td width="76%">How many days per week are they working on surveys<br />
+            (in and out    of office)?</td>
+            <td align="center"><input type="number" id="days" name="days" value="" placeholder="Days" class="input" /></td>
+          </tr>
+          <tr>
+            <td width="76%">Daily charge out rate?</td>
+            <td align="center"><input type="number" id="rate" name="rate" value="" placeholder="Rate" class="input" /></td>
+          </tr>
+          <tr>
+            <td width="76%">Hours spent on write-up for each 8 hours spent on site</td>
+            <td align="center"><input type="number" id="writeup" name="writeup" value="" placeholder="hrs" class="input" /></td>
+          </tr>
+	  </table>
+		  <table width="95%" align="center" class="box">
+          <tr>
+            <td width="485">How do you currently do your reports? </td>
+            <td nowrap>
+			<strong class="hand">
+              <input name="report_type" type="radio" id="report_type1" value="75" checked="checked" class="input" />
+              <label class="hand" for="report_type1">Paper = 75%</label><br />
+              <input name="report_type" type="radio" id="report_type2" value="60" class="input" />
+			  <label class="hand" for="report_type2">Administrator    = 60%</label>
+			  <br />
+			  <input name="report_type" type="radio" id="report_type3" value="40" class="input" />
+			  <label class="hand" for="report_type3">Other Software System = 40%</label>
+            </strong></td>
+          </tr>
+          <tr>
+            <td colspan="2"><hr /></td>
+          </tr>
+          <tr>
+            <td width="485" align="right">It will cost you (per month)</td>
+            <td align="center"><table width="88%" border="0">
+              <tr>
+                <td width="50%" align="center" class="result_box" title="Cost Per Month"><strong id="month_cost">£800</strong></td>
+                <td width="50%" align="center" class="result_box" title="Cost Per Month"><strong id="month_cost2">£800</strong></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td width="485" align="right">It will save you (per month)</td>
+            <td align="center"><table width="88%" border="0">
+              <tr>
+                <td width="50%" align="center" class="result_box result_box2" title="Cost Per Month"><strong id="month_save">£7,794</strong></td>
+                <td width="50%" align="center" class="result_box result_box2" title="Cost Per Month"><strong id="month_save2">£7,794</strong></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+      </table>
+		
+	</div>
+
+	
+	
+	
+</body>
+</html>
