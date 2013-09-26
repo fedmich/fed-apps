@@ -1,4 +1,4 @@
-/* v0.1 */
+/* v0.2 */
 
 $(function() {
 	$('#surveyors').val( 2 );
@@ -9,7 +9,35 @@ $(function() {
 	$('.input').change( function (){
 		calculate();
 	});
+	
 	calculate();
+	
+	$('#cur_switch_eur').click(function(){
+		$(this).addClass('active');
+		$('#cur_switch_aud').removeClass('active');
+		
+		$('#month_cost').closest('.result_box').removeClass('hdn');
+		$('#month_cost2').closest('.result_box').addClass('hdn');
+		
+		$('#month_save').closest('.result_box').removeClass('hdn');
+		$('#month_save2').closest('.result_box').addClass('hdn');
+		
+	});
+	$('#cur_switch_aud').click(function(){
+		$(this).addClass('active');
+		$('#cur_switch_eur').removeClass('active');
+		$('#month_cost').closest('.result_box').addClass('hdn');
+		$('#month_cost2').closest('.result_box').removeClass('hdn');
+		
+		$('#month_save').closest('.result_box').addClass('hdn');
+		$('#month_save2').closest('.result_box').removeClass('hdn');
+	});
+	
+	var ltypes = $('.lbl_rtype');
+	ltypes.click( function (){
+		ltypes.not( this ).removeClass('active_percentage');
+		$( this ).addClass('active_percentage');
+	});
 });
 
 function calculate(){

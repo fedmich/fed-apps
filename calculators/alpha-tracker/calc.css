@@ -1,0 +1,97 @@
+/* v0.2 */
+
+body{
+	margin:0;
+	padding:0;
+}
+h1.app_name{
+	margin:0 0 5px 0;
+	padding:0;
+	color:#333399;
+}
+.hand{
+	cursor:pointer;
+}
+#surveyors{
+	width:60px;
+}
+#days{
+	width:60px;
+}
+#rate{
+	width:60px;
+}
+#writeup{
+	width:60px;
+}
+
+.calc_page{
+	background-color : #DADFE4;
+	width:500px;
+	margin: 10px auto auto auto;
+	padding-bottom:2px;
+	
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+.calc_page h1{
+	text-align:center;
+}
+.calc_page .box{
+	border:2px solid #4B76A2;
+	padding: 10px 5px 0px 5px;
+	margin-bottom:10px;
+}
+.calc_page .result_box{
+	background-color:#FFFFFF;
+	font-size:20px;
+	border:1px solid #666666;
+	padding: 5px;
+	
+	color:#02528A;
+}
+.calc_page .result_box2{
+	color:#FDC02C;
+}
+.calc_page th{
+	background-color:#4B76A2;
+}
+.calc_page td{
+	
+}
+
+.hdn{
+	display:none;
+}
+
+.active_percentage{
+	color:#02528A;
+	font-weight:bold;
+}
+
+.cur_switch{
+	font-size:25px;
+	background-color:#FFFFFF;
+	font-size:22px;
+	border:1px solid #666666;
+	padding: 10px;
+	text-decoration:none;
+	margin-bottom:10px;
+}
+
+#cur_switch_eur{
+	color:#96CA6D;
+}
+#cur_switch_aud{
+	color:#FF952E;
+}
+
+#cur_switch_eur.active
+, #cur_switch_aud.active
+{
+	font-weight:bold;
+	background-color:#2F96B4;
+	color:white;
+	margin-bottom:5px;
+}
