@@ -111,3 +111,9 @@ table.shiny_blue  tr th, table.shiny_blue  tr th a:visited, table.shiny_blue  tr
 	width:80%;
 	margin-bottom:30px;
 }
+
+.widgets .youtube{
+	color:#E47002;
+	font-size:18px;
+	text-decoration:none;
+}
