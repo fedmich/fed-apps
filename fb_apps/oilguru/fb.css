@@ -117,3 +117,6 @@ table.shiny_blue  tr th, table.shiny_blue  tr th a:visited, table.shiny_blue  tr
 	font-size:18px;
 	text-decoration:none;
 }
+.job_tbl{
+	font-family: 'Oxygen', sans-serif;
+}
