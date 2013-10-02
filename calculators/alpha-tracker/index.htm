@@ -27,7 +27,13 @@
           </tr>
           <tr>
             <td width="76%">Daily charge out rate?</td>
-            <td align="right"> £ <input type="number" id="rate" name="rate" value="" placeholder="Rate" class="input" /></td>
+            <td align="right">
+			<input type="number" id="rate" name="rate" value="" placeholder="Rate" class="input" />
+            <br />
+            <input name="currency_type" type="radio" class="input" value="£" checked="checked" /> <label class="hand lbl_rtype active_percentage " for="report_type1">£</label>
+			<input name="currency_type" type="radio" class="input" value="$" /> <label class="hand lbl_rtype active_percentage " for="report_type1">$</label>
+			  
+			   </td>
           </tr>
           <tr>
             <td width="76%">Hours spent on write-up for each 8 hours spent on site</td>
@@ -52,18 +58,10 @@
             <td colspan="2"><hr /></td>
           </tr>
           <tr>
-            <td align="right">&nbsp;</td>
-            <td align="center" height="40"> 
-				<a href="#" class="cur_switch active" id="cur_switch_eur">£</a>
-				<a href="#" class="cur_switch" id="cur_switch_aud">$</a>
-			</td>
-          </tr>
-          <tr>
             <td width="485" align="right">It will cost you (per month)</td>
             <td align="center"><table width="88%" border="0">
               <tr>
                 <td width="50%" align="center" class="result_box" title="Cost Per Month"><strong id="month_cost">£800</strong></td>
-                <td width="50%" align="center" class="result_box hdn" title="Cost Per Month"><strong id="month_cost2">£800</strong></td>
               </tr>
             </table></td>
           </tr>
@@ -72,7 +70,6 @@
             <td align="center"><table width="88%" border="0">
               <tr>
                 <td width="50%" align="center" class="result_box result_box2" title="Cost Per Month"><strong id="month_save">£7,794</strong></td>
-                <td width="50%" align="center" class="result_box result_box2 hdn" title="Cost Per Month"><strong id="month_save2">£7,794</strong></td>
               </tr>
             </table></td>
           </tr>

@@ -69,29 +69,3 @@ h1.app_name{
 	color:#02528A;
 	font-weight:bold;
 }
-
-.cur_switch{
-	font-size:25px;
-	background-color:#FFFFFF;
-	font-size:22px;
-	border:1px solid #666666;
-	padding: 10px;
-	text-decoration:none;
-	margin-bottom:10px;
-}
-
-#cur_switch_eur{
-	color:#96CA6D;
-}
-#cur_switch_aud{
-	color:#FF952E;
-}
-
-#cur_switch_eur.active
-, #cur_switch_aud.active
-{
-	font-weight:bold;
-	background-color:#2F96B4;
-	color:white;
-	margin-bottom:5px;
-}

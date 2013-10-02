@@ -12,27 +12,6 @@ $(function() {
 	
 	calculate();
 	
-	$('#cur_switch_eur').click(function(){
-		$(this).addClass('active');
-		$('#cur_switch_aud').removeClass('active');
-		
-		$('#month_cost').closest('.result_box').removeClass('hdn');
-		$('#month_cost2').closest('.result_box').addClass('hdn');
-		
-		$('#month_save').closest('.result_box').removeClass('hdn');
-		$('#month_save2').closest('.result_box').addClass('hdn');
-		
-	});
-	$('#cur_switch_aud').click(function(){
-		$(this).addClass('active');
-		$('#cur_switch_eur').removeClass('active');
-		$('#month_cost').closest('.result_box').addClass('hdn');
-		$('#month_cost2').closest('.result_box').removeClass('hdn');
-		
-		$('#month_save').closest('.result_box').addClass('hdn');
-		$('#month_save2').closest('.result_box').removeClass('hdn');
-	});
-	
 	var ltypes = $('.lbl_rtype');
 	ltypes.click( function (){
 		ltypes.not( this ).removeClass('active_percentage');
@@ -56,14 +35,11 @@ function calculate(){
 		* ( (writeup / 8) * rate )
 		;
 	
-	to_num ( $('#month_cost') , cost , '£' );
-	to_num ( $('#month_save') , answer, '£' );
+	var rtype = $('[name=report_type]:checked').val()
+	var curr = $('[name=currency_type]:checked').val()
 	
-	var cost2 = cost * 1.44;	//rate
-	var answer2 = answer * 1.44;	//rate
-	
-	to_num ( $('#month_cost2') , cost2 );
-	to_num ( $('#month_save2') , answer );
+	to_num ( $('#month_cost') , cost, curr );
+	to_num ( $('#month_save') , answer , curr );
 	
 }
 
