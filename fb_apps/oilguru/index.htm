@@ -9,7 +9,7 @@
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	-->
 	<script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
-	<script type="text/javascript" src="fb.js"></script>
+	<script type="text/javascript" src="fb.js?v=2"></script>
 	
 	<link href="static/lib/colorbox/1/colorbox.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="fb.css" rel="stylesheet" type="text/css" media="all" />
@@ -33,13 +33,14 @@
               </table>
               <p><a href="http://oilguru.org/resumes-2/register/" target="_blank" class="button_blue">Candidates register here</a></p>
             <p><a href="http://oilguru.org/jobs-3/employer/register/" target="_blank" class="button_blue">Post a Job </a></p></td>
-            <td width="650"><table width="99%" border="0" cellpadding="0" cellspacing="0" class="job_tbl">
+            <td width="650" valign="top"><table width="99%" border="0" cellpadding="0" cellspacing="0" class="job_tbl">
                 <tr>
-                  <td width="70" align="center"><form id="form1" method="post" action="">
+                  <td width="70" align="center">
+				  <form id="form1" method="post" action="./">
                     <table width="100%" border="0" align="center">
                       <tr>
-                        <td><p>Search
-                          <input type="text" name="s" />
+                        <td nowrap="nowrap"><p>Search
+                            <input type="text" name="s" />
                         </p></td>
                         <td>Categories
                           <select name="category" id="category">
@@ -115,7 +116,8 @@
                 </tr>
                 <tr>
                   <td align="center">
-				  <table width="99%" border="0" cellpadding="0" cellspacing="0" class="job_tbl shiny_blue" id="job_listing">
+				  <div align="center" id="job_listing">
+				  <table width="99%" border="0" cellpadding="0" cellspacing="0" class="job_tbl shiny_blue">
 					<thead>
                     <tr>
                       <th width="70" align="center">Company</th>
@@ -176,6 +178,8 @@
                     </tr>
 					</tbody>
                   </table>
+
+				  </div>
 				  </td>
                 </tr>
               </table>              
