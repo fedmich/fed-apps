@@ -10,8 +10,7 @@
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script type="text/javascript" src="calc.js"></script>
 	<link href="calc.css" rel="stylesheet" type="text/css" media="all" />
-	
-</head>
+  </head>
 <body>
 	<div class="calc_page">
 	<h1 class="app_name">Alpha Tracker Savings Calculator</h1>
@@ -33,7 +32,7 @@
             <input name="currency_type" type="radio" class="input" value="£" checked="checked" /> <label class="hand lbl_rtype active_percentage " for="currency_type">£</label>
 			<input name="currency_type" type="radio" class="input" value="$" /> <label class="hand lbl_rtype active_percentage " for="currency_type">$</label>
 			  
-			   </td>
+		    </td>
           </tr>
           <tr>
             <td width="76%">Hours spent on write-up for each 8 hours spent on site</td>
@@ -42,23 +41,25 @@
 	  </table>
 		  <table width="95%" align="center" class="box">
           <tr>
-            <td width="485">How do you currently do your reports? </td>
-            <td nowrap>
-			<strong class="hand">
-              <input name="report_type" type="radio" id="report_type1" value="75" checked="checked" class="input" />
-              <label class="hand lbl_rtype active_percentage " for="report_type1">Paper</label><br />
-              <input name="report_type" type="radio" id="report_type2" value="60" class="input" />
-			  <label class="hand lbl_rtype" for="report_type2">Administrator</label>
-			  <br />
-			  <input name="report_type" type="radio" id="report_type3" value="40" class="input" />
-			  <label class="hand lbl_rtype" for="report_type3">Other Software System</label>
+            <td colspan="2">How do you currently do your reports? </td>
+          </tr>
+          <tr>
+            <td colspan="2" width="485"><strong class="hand">
+            <input name="report_type" type="radio" id="report_type1" value="75" checked="checked" class="input" />
+            <label class="hand lbl_rtype active_percentage " for="report_type1">Collect data on paper and surveyor types up</label>
+            <br />
+            <input name="report_type" type="radio" id="report_type2" value="60" class="input" />
+            <label class="hand lbl_rtype" for="report_type2">Collect data on paper and office administrator types up</label>
+            <br />
+            <input name="report_type" type="radio" id="report_type3" value="40" class="input" />
+            <label class="hand lbl_rtype" for="report_type3">Other Software System</label>
             </strong></td>
           </tr>
           <tr>
             <td colspan="2"><hr /></td>
           </tr>
           <tr>
-            <td width="485" align="right">It will cost you (per month)</td>
+            <td width="485" align="right">Alpha Tracker will cost you (per month)</td>
             <td align="center"><table width="88%" border="0">
               <tr>
                 <td width="50%" align="center" class="result_box" title="Cost Per Month"><strong id="month_cost">£800</strong></td>
@@ -66,7 +67,7 @@
             </table></td>
           </tr>
           <tr>
-            <td width="485" align="right">It will save you (per month)</td>
+            <td width="485" align="right">Alpha Tracker will <strong>save </strong>you (per month)</td>
             <td align="center"><table width="88%" border="0">
               <tr>
                 <td width="50%" align="center" class="result_box result_box2" title="Cost Per Month"><strong id="month_save">£7,794</strong></td>
