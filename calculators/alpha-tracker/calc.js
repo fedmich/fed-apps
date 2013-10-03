@@ -44,13 +44,13 @@ function calculate(){
 }
 
 function to_num ( obj, v , cur ){
+	if(! cur){
+		cur = '$';
+	}
 	obj.html( '...' );
 	if(! v){
-		obj.html( '$0' );
+		obj.html( cur + '0' );
 		return false;
-	}
-	if(! cur){
-		cur = '$'
 	}
 	obj.html( cur + addCommas( v.toFixed(2) ) );
 }
