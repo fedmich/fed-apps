@@ -18,17 +18,17 @@
 	<table width="95%" border="0" align="center" cellpadding="2" cellspacing="0" class="box">
           <tr>
             <td width="76%">How    many surveyors do  you have?</td>
-            <td width="24%" align="right"><input type="number" id="surveyors" name="surveyors" value="" placeholder="Surveyos" class="input" /></td>
+            <td width="24%" align="right"><input type="number" id="surveyors" name="surveyors" value="" placeholder="Surveyors" class="input" min="0" autofocus /></td>
           </tr>
           <tr>
             <td width="76%">How many days per week are they working on surveys<br />
             (in and out    of office)?</td>
-            <td align="right"><input type="number" id="days" name="days" value="" placeholder="Days" class="input" /></td>
+            <td align="right"><input type="number" id="days" name="days" value="" placeholder="Days" class="input" min="0"  /></td>
           </tr>
           <tr>
             <td width="76%">Daily charge out rate?</td>
             <td align="right">
-			<input type="number" id="rate" name="rate" value="" placeholder="Rate" class="input" />
+			<input type="number" id="rate" name="rate" value="" placeholder="Rate" class="input" min="0" />
             <br />
             <input name="currency_type" type="radio" class="input" value="£" checked="checked" /> <label class="hand lbl_rtype active_percentage " for="currency_type">£</label>
 			<input name="currency_type" type="radio" class="input" value="$" /> <label class="hand lbl_rtype active_percentage " for="currency_type">$</label>
@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td width="76%">Hours spent on write-up for each 8 hours spent on site</td>
-            <td align="right"><input type="number" id="writeup" name="writeup" value="" placeholder="hrs" class="input" /></td>
+            <td align="right"><input type="number" id="writeup" name="writeup" value="" placeholder="hrs" class="input" min="0" /></td>
           </tr>
 	  </table>
 		  <table width="95%" align="center" class="box">
