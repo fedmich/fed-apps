@@ -8,6 +8,7 @@ body{
 	width:810px;
 	color:black;
 	padding: 10px 0px 10px 0px;
+	font-family: 'Oxygen', sans-serif , Arial;
 }
 .container{
 	background-color:#EFF0F2;
@@ -118,5 +119,4 @@ table.shiny_blue  tr th, table.shiny_blue  tr th a:visited, table.shiny_blue  tr
 	text-decoration:none;
 }
 .job_tbl{
-	font-family: 'Oxygen', sans-serif;
 }
