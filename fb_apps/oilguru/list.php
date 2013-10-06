@@ -4,11 +4,22 @@
 	
 	$cat = empty($_GET['cat'])?'':$_GET['cat'];
 	if($cat){
-		$url = "http://oilguru.org/jobs-3/rss/$cat/";
+		if( is_numeric($cat)){
+			$url = "http://oilguru.org/jobs-3/rss/?category=$cat";
+		}
+		else{
+			$url = "http://oilguru.org/jobs-3/rss/$cat/";
+		}
 	}
 	else{
-		//ALL
-		$url = "http://oilguru.org/jobs-3/rss/all/";
+		$search = empty($_GET['search'])?'':$_GET['search'];
+		if($search){
+			$url = "http://oilguru.org/jobs-3/rss/?query=$search";
+		}
+		else{
+			//ALL
+			$url = "http://oilguru.org/jobs-3/rss/all/";
+		}
 	}
 	$feed = new SimplePie();
 	
