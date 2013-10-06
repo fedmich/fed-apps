@@ -43,11 +43,15 @@ a img{
 fieldset{
 	margin-bottom:10px;
 	background-color:#F8F9F9;
+	text-align:left;
 }
 fieldset legend{
 	font-size:12px;
 	font-weight:bold;
 	margin-bottom:5px;
+}
+fieldset div{
+	text-align:center;
 }
 #videos_section{
 	margin-top:15px;
@@ -178,6 +182,7 @@ table.shiny_blue  tr th, table.shiny_blue  tr th a:visited, table.shiny_blue  tr
 }
 .job_tbl{
 }table.gray { width: 95%; border-collapse: collapse; }
+table.gray { width: 95%; border-collapse: collapse; }
 table.gray th { background: #333; color: #fff; }
 table.gray th a{color: #0099CC;}
 table.gray th, table.gray td { border-bottom: 1px solid #ccc; padding: 2px 5px; font-size: 100%;}
