@@ -22,16 +22,25 @@ a img{
 }
 
 .job_tbl{
+
+}
+.job_filter{
 	background-color:#F8F9F9;
 	color:black;
-	
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
 	border:1px solid #c3c4bf;
+	margin-bottom:10px;
+	font-size:12px;
+	text-align:center;
 }
+#search{
+	width:80px;
+}
+
 .job_tbl td.jlist{
-	border-bottom:2px solid gray;
+
 }
 
 .job_tbl .job_title{
