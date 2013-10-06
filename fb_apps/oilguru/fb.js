@@ -15,13 +15,23 @@ $(function() {
 		load_jobs( $('#category').val() )
 	});
 
+	$('#form1').submit( function (){
+		var s = $('#search').val();
+		load_jobs( '', s );
+
+		return false;
+	});
 });
 
-function load_jobs( cat ){
+function load_jobs( cat , search ){
 	var oTbl = $('#job_listing');
 	oTbl.html('<img src="img/loading.gif" />Loading... ');
-	var url = 'list.php' + ( cat ? '?cat='+cat : '' ) ;
+	if( cat ){
+		var url = 'list.php' + ( cat ? '?cat='+cat : '' ) ;
+	}
+	else{
+		var url = 'list.php' + ( search ? '?search=' + search : '' ) ;
+	}
 	$.get( url, '', function (data){
 		oTbl.html( data );
-	} );
 }
