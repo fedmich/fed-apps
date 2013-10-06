@@ -9,6 +9,8 @@ body{
 	color:black;
 	padding: 10px 0px 10px 0px;
 	font-family: 'Oxygen', sans-serif , Arial;
+	font-size:12px;
+
 }
 .container{
 	background-color:#EFF0F2;
@@ -27,16 +29,23 @@ a img{
 .job_filter{
 	background-color:#F8F9F9;
 	color:black;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	border:1px solid #c3c4bf;
 	margin-bottom:10px;
-	font-size:12px;
 	text-align:center;
 }
 #search{
 	width:80px;
+}
+
+fieldset{
+	margin-bottom:10px;
+	background-color:#F8F9F9;
+}
+.youtube_box{
+	margin-bottom:20px;
 }
 
 .job_tbl td.jlist{
@@ -44,9 +53,19 @@ a img{
 }
 
 .job_tbl .job_title{
-	color:#E47002;
-	font-size:18px;
+	color:#000000;
+	font-size:14px;
 	text-decoration:none;
+}
+.job_tbl tr:hover .job_title{
+	color:#E47002;
+}
+
+.job_tbl tr:hover .button_blue{
+	opacity: 1;
+}
+.job_tbl .button_blue{
+	opacity: 0.6;
 }
 
 .button_blue{
@@ -123,9 +142,10 @@ table.shiny_blue  tr th, table.shiny_blue  tr th a:visited, table.shiny_blue  tr
 }
 
 .widgets .youtube{
-	color:#E47002;
-	font-size:18px;
+	color:#336600;
+	font-weight:bold;
 	text-decoration:none;
+	font-size:10px;
 }
 .job_tbl{
 }
