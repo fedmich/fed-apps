@@ -8,18 +8,59 @@
 	<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
 	-->
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script type="text/javascript" src="calc.js?v=2"></script>
-	<link href="calc.css?v=2" rel="stylesheet" type="text/css" media="all" />
+	<script type="text/javascript" src="static/js/lib/jquery.smartWizard-2.0.min.js"></script>
+	<script type="text/javascript" src="calc.js?v=3"></script>
+	
+	<link href="static/css/smart_wizard.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="calc.css?v=3" rel="stylesheet" type="text/css" media="all" />
   </head>
 <body>
 	<div class="calc_page">
 	<h1 class="app_name">Calculator</h1>
-	<table border="0" align="center" cellpadding="2" cellspacing="0" class="box">
-          <tr>
-            <td>Headline figures</td>
-            <td align="right">&nbsp;</td>
-          </tr>
-          <tr>
+	
+	<div id="wizard" class="swMain">
+	
+	<ul>
+    <li><a href="#step-1">
+          <label class="stepNumber">1</label>
+          <span class="stepDesc">
+             Step 1<br />
+             <small>Headline figures</small>
+          </span>
+      </a></li>
+    <li><a href="#step-2">
+          <label class="stepNumber">2</label>
+          <span class="stepDesc">
+             Step 2<br />
+             <small>Estimates</small>
+          </span>
+      </a></li>
+    <li><a href="#step-3">
+          <label class="stepNumber">3</label>
+          <span class="stepDesc">
+             Step 3<br />
+             <small>Step 3 description</small>
+          </span>                   
+       </a></li>
+    <li><a href="#step-4">
+          <label class="stepNumber">4</label>
+          <span class="stepDesc">
+             Step 4<br />
+             <small>MIS</small>
+          </span>                   
+      </a></li>
+  	<li><a href="#step-5">
+          <label class="stepNumber">5</label>
+          <span class="stepDesc">
+             Settlement
+          </span>                   
+      </a></li>
+  	</ul>
+	
+	<div id="step-1">   
+      <h2 class="StepTitle">Headline figures</h2>
+	   <table border="0" align="center" cellpadding="2" cellspacing="0" class="box">
+       <tr>
             <td width="544">Approximate card turnover</td>
             <td align="right"><input type="number" id="turnover" name="turnover" value="" class="input num" /></td>
           </tr>
@@ -31,14 +72,12 @@
             <td>Total    Merchant Service Charge </td>
             <td align="right"><input type="number" id="merch_charge" name="merch_charge" value="" class="money" /></td>
           </tr>
-          <tr>
-            <td><strong>The Splits: Please give an estimate for the approximate % of transactions which are:</strong></td>
-            <td align="right">&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td align="right">&nbsp;</td>
-          </tr>
+	   </table>
+	   
+  </div>
+  <div id="step-2">
+      <h2 class="StepTitle">The Splits: Please give an estimate for the approximate % of transactions which are:</h2> 
+       <table border="0" align="center" cellpadding="2" cellspacing="0" class="box">
           <tr>
             <td width="544">Credit Cards</td>
             <td align="right"><input type="number" id="credit_cards" name="credit_cards" value="" class="percent input" />
@@ -87,11 +126,12 @@
             <td align="right"><input type="number" id="internet" name="internet" value="" class="percent input" />
 %</td>
           </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td align="right">&nbsp;</td>
-          </tr>
-          <tr>
+	   </table>
+  </div>                      
+  <div id="step-3">
+      <h2 class="StepTitle">Step 3 Title</h2>   
+       <table border="0" align="center" cellpadding="2" cellspacing="0" class="box">
+       <tr>
             <td>Dynamic Currency Conversion (DCC)</td>
 			<td align="right">
 			<label class="hand"><input name="boolDCC" type="checkbox" id="boolDCC" value="" class="input_check" /> Yes</label>			</td>
@@ -114,14 +154,11 @@
             <td align="right"><input type="number" id="percent_comm" name="percent_comm" value="" class="percent" />
               %</td>
           </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td align="right">&nbsp;</td>
-          </tr>
-          <tr>
-            <td><strong>Management Information Systems (MIS)</strong></td>
-            <td align="right">&nbsp;</td>
-          </tr>
+	   </table>
+  </div>
+  <div id="step-4">
+      <h2 class="StepTitle">Management Information Systems (MIS)</h2>   
+       <table border="0" align="center" cellpadding="2" cellspacing="0" class="box">
           <tr>
             <td align="left">Can your MIS:</td>
             <td align="right">&nbsp;</td>
@@ -166,10 +203,11 @@ Yes</label></td>
             <td>&nbsp;</td>
             <td align="right">&nbsp;</td>
           </tr>
-          <tr>
-            <td><strong>Settlement time</strong></td>
-            <td align="right">&nbsp;</td>
-          </tr>
+	   </table>                         
+  </div>
+  <div id="step-5">
+      <h2 class="StepTitle">Settlement time</h2>   
+       <table border="0" align="center" cellpadding="2" cellspacing="0" class="box">
           <tr>
             <td>How long does it    currently take to clear payments into your account?</td>
             <td align="right"><input type="number" id="clear_pay" name="clear_pay" value="" class="input days" /> 
@@ -226,6 +264,12 @@ Yes</label></td>
             <td>&nbsp;</td>
             <td align="right">&nbsp;</td>
           </tr>
+	   </table>                         
+  </div>
+	</div>
+  
+	<table border="0" align="center" cellpadding="2" cellspacing="0" class="box">
+          
           <tr>
             <th colspan="2">Calculated Results			</th>
           </tr>
@@ -233,7 +277,10 @@ Yes</label></td>
             <td colspan="2" align="center">Merchant Service Charges</td>
           </tr>
           <tr height="17">
-            <td height="17"><span class="lang lang_en">Merchant Service Charges</span></td>
+            <td height="17"><span class="lang lang_en">Merchant Service Charges</span>
+			<br />
+			<span class="hint" id="msg1">...</span>
+			</td>
 			<td align="right" class="result_box"><strong id="merch_charge_result">$52.00 </strong></td>
           </tr>
           <tr height="17">

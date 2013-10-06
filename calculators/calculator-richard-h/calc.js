@@ -7,6 +7,10 @@ $(function() {
 	});
 	
 	calculate();
+
+	$(document).ready(function() {
+		$('#wizard').smartWizard();
+	});
 });
 
 function calculate(){
