@@ -61,7 +61,7 @@
 		//$dx = date('M j, Y', $item->get_date('U'));
 		$dx = date('M j', $item->get_date('U'));
 		?>				
-		<tr>
+		<tr class="<?=$ctr%2==0?'even':'odd';?>">
 			<?php  /*  
 		  <td align="center" class="jlist"><img src="img/companies/logo_williams.png" alt="" width="64" height="36" /></td>
 		    */ ?>
@@ -75,8 +75,8 @@
 		  <td class="jlist">
 		  <?=$dx;?>
 		  </td>
-		  <td>
-		  	<a href="<?=$link;?>" target="_blank" class="button_blue">APPLY</a>
+		  <td align="center">
+		  	<a href="<?=$link;?>" target="_blank" class="button_green">Apply</a>
 		  </td>
 		</tr>	
 		<?php
