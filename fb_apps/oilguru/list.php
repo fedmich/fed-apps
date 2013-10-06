@@ -29,7 +29,7 @@
 	$cnt=count($feeds);
 	if(! $cnt){
 		?>
-		<div class="">
+		<div class="no_job" align="center">
 			No job found...
 		</div>
 		<?php
@@ -40,32 +40,43 @@
 	<table width="99%" border="0" cellpadding="0" cellspacing="0" class="job_tbl shiny_blue">
 		<thead>
 		<tr>
-			<th width="70" align="center">Company</th>
-		    
-		  <th>Job</th>
-		  <th>Location</th>
+			<th>#</th>
+	  	  <th>Job</th>
 		  <th>Date</th>
+		  <th></th>
 		</tr>
 		</thead>
 	<tbody>	
 	<?php
+	$ctr = 0;
 	foreach($feeds as $item){
+		++$ctr;
+		if($ctr > 15){
+			break;
+		}
 	
 		$title = $item->get_title();
 		$link = $item->get_link();
 		
-		$dx = date('M j, Y', $item->get_date('U'));
+		//$dx = date('M j, Y', $item->get_date('U'));
+		$dx = date('M j', $item->get_date('U'));
 		?>				
 		<tr>
 			<?php  /*  
 		  <td align="center" class="jlist"><img src="img/companies/logo_williams.png" alt="" width="64" height="36" /></td>
 		    */ ?>
-		  <td align="center" class="jlist"><img src="img/company_icon.png" alt="" width="64" height="64" /></td>
+			
+			<td width="20">
+			<?=$ctr;?>
+			</td>
+			
 		  <td class="jlist"><a href="<?=$link;?>" target="_blank" class="job_title"><?=$title;?></a><br />
 		  </td>
-		  <td class="jlist">???</td>
 		  <td class="jlist">
 		  <?=$dx;?>
+		  </td>
+		  <td>
+		  	<a href="<?=$link;?>" target="_blank" class="button_blue">APPLY</a>
 		  </td>
 		</tr>	
 		<?php
