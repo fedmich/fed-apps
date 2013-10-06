@@ -177,4 +177,9 @@ table.shiny_blue  tr th, table.shiny_blue  tr th a:visited, table.shiny_blue  tr
 	font-size:10px;
 }
 .job_tbl{
-}
+}table.gray { width: 95%; border-collapse: collapse; }
+table.gray th { background: #333; color: #fff; }
+table.gray th a{color: #0099CC;}
+table.gray th, table.gray td { border-bottom: 1px solid #ccc; padding: 2px 5px; font-size: 100%;}
+table.gray .odd { background: #fff; }
+table.gray .even { background: #f7f7f7; }

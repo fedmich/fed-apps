@@ -37,7 +37,7 @@
 	}
 	?>
 	
-	<table width="99%" border="0" cellpadding="0" cellspacing="0" class="job_tbl shiny_blue">
+	<table width="99%" border="0" cellpadding="0" cellspacing="0" class="job_tbl gray">
 		<thead>
 		<tr>
 			<th>#</th>
