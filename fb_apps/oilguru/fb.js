@@ -11,10 +11,12 @@ $(function() {
 	});
 
 	$('#category').change(function(){
-		console.log( $('#category').val() );
+		//console.log( $('#category').val() );
+		$('#search').val('');
 		load_jobs( $('#category').val() )
 	});
 
+	load_jobs( '' );
 	$('#form1').submit( function (){
 		var s = $('#search').val();
 		load_jobs( '', s );
@@ -34,4 +36,7 @@ function load_jobs( cat , search ){
 	}
 	$.get( url, '', function (data){
 		oTbl.html( data );
+
+		FB.Canvas.setAutoGrow();
+	});
 }
