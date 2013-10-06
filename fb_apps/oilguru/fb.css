@@ -37,12 +37,20 @@ a img{
 	text-align:center;
 }
 #search{
-	width:80px;
+	width:90px;
 }
 
 fieldset{
 	margin-bottom:10px;
 	background-color:#F8F9F9;
+}
+fieldset legend{
+	font-size:12px;
+	font-weight:bold;
+	margin-bottom:5px;
+}
+#videos_section{
+	margin-top:15px;
 }
 .youtube_box{
 	margin-bottom:20px;
