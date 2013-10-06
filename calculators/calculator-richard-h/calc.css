@@ -1,0 +1,92 @@
+/* v0.2 */
+
+body{
+	margin:0;
+	padding:0;
+	font-family:Arial;
+}
+h1.app_name{
+	margin:0 0 5px 0;
+	padding:0;
+	color:#333399;
+}
+.hand{
+	cursor:pointer;
+}
+input.num{
+	width:60px;
+	text-align:right;
+}
+input.days{
+	width:50px;
+	text-align:right;
+}
+input.percent{
+	width:50px;
+	text-align:right;
+}
+input.money{
+	width:60px;
+	text-align:right;
+}
+input.name{
+	width:120px;
+}
+
+.calc_page{
+	background-color : #DADFE4;
+	width:700px;
+	margin: 10px auto auto auto;
+	padding-bottom:2px;
+	
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	
+	font-size:14px;
+}
+.calc_page h1{
+	text-align:center;
+}
+.calc_page .box{
+	border:2px solid #4B76A2;
+	padding: 10px 5px 0px 5px;
+	margin-bottom:10px;
+}
+.calc_page .result_box{
+	background-color:#FFFFFF;
+	font-size:20px;
+	border:1px solid #666666;
+	padding: 5px;
+	
+	color:#02528A;
+}
+.calc_page .result_box2{
+	color:#FDC02C;
+}
+
+.calc_page th{
+	background-color:#52B948;
+	color:#FFFFFF;
+}
+.calc_page td{
+	
+}
+
+
+
+.hdn{
+	display:none;
+}
+
+.active_percentage{
+	color:#02528A;
+	font-weight:bold;
+}
+
+
+
+.calc_page .hint{
+	color:#330099;
+	font-weight:bold;
+}

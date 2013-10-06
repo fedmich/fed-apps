@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title>Calculator</title>
+	
+	<!--
+	<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+	-->
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="calc.js?v=2"></script>
+	<link href="calc.css?v=2" rel="stylesheet" type="text/css" media="all" />
+  </head>
+<body>
+	<div class="calc_page">
+	<h1 class="app_name">Calculator</h1>
+	<table border="0" align="center" cellpadding="2" cellspacing="0" class="box">
+          <tr>
+            <td>Headline figures</td>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="544">Approximate card turnover</td>
+            <td align="right"><input type="number" id="turnover" name="turnover" value="" class="input num" /></td>
+          </tr>
+          <tr>
+            <td>Approximate ATV (Average Transaction    Value)</td>
+            <td align="right"><input type="number" id="atv" name="atv" value="" class="num" /></td>
+          </tr>
+          <tr>
+            <td>Total    Merchant Service Charge </td>
+            <td align="right"><input type="number" id="merch_charge" name="merch_charge" value="" class="money" /></td>
+          </tr>
+          <tr>
+            <td><strong>The Splits: Please give an estimate for the approximate % of transactions which are:</strong></td>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="544">Credit Cards</td>
+            <td align="right"><input type="number" id="credit_cards" name="credit_cards" value="" class="percent input" />
+%</td>
+          </tr>
+          <tr>
+            <td>Debit Cards</td>
+            <td align="right"><input type="number" id="debit_cards" name="debit_cards" value="" class="percent input" />
+%</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="544">Consumer cards</td>
+            <td align="right"><input type="number" id="consumer_cards" name="consumer_cards" value="" class="percent input" />
+%</td>
+          </tr>
+          <tr>
+            <td>Commercial cards</td>
+            <td align="right"><input type="number" id="comm_cards" name="comm_cards" value="" class="percent input" />
+%</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr>
+            <td>UK Cards </td>
+            <td align="right"><input type="number" id="uk_cards" name="uk_cards" value="" class="percent input" />
+%</td>
+          </tr>
+          <tr>
+            <td>Non UK Cards </td>
+            <td align="right"><input type="number" id="non_uk" name="non_uk" value="" class="percent input" />
+%</td>
+          </tr>
+          <tr>
+            <td width="544">Face-to-Face</td>
+            <td align="right"><input type="number" id="face2face" name="face2face" value="" class="percent input" />
+%</td>
+          </tr>
+          <tr>
+            <td>Internet / Telephone</td>
+            <td align="right"><input type="number" id="internet" name="internet" value="" class="percent input" />
+%</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Dynamic Currency Conversion (DCC)</td>
+			<td align="right">
+			<label class="hand"><input name="boolDCC" type="checkbox" id="boolDCC" value="" class="input_check" /> Yes</label>			</td>
+          </tr>
+          <tr>
+            <td>Who provides this facility?</td>
+            <td align="right"><input type="text" id="facility" name="facility" value="" class="name input" /></td>
+          </tr>
+          <tr>
+            <td>What is your APPROXIMATE % of transactions which ARE converted?</td>
+            <td align="right"><input type="number" id="percent_tran" name="percent_tran" value="" class="percent input" />
+              %</td>
+          </tr>
+          <tr>
+            <td>How many currencies can you accept?</td>
+            <td align="right"><input type="number" id="currencies" name="currencies" value="" class="input num" /></td>
+          </tr>
+          <tr>
+            <td>What DCC commission rate do you receive?</td>
+            <td align="right"><input type="number" id="percent_comm" name="percent_comm" value="" class="percent" />
+              %</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr>
+            <td><strong>Management Information Systems (MIS)</strong></td>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr>
+            <td align="left">Can your MIS:</td>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Replace paper    statements with electronic ones</td>
+            <td align="right">
+			<label class="hand"><input name="bool1" type="checkbox" id="bool1" value="" class="input_check" /> 
+			Yes</label>			</td>
+          </tr>
+          <tr>
+            <td>Flag suspicious transaction patterns and    help identify fraudulent card activity</td>
+            <td align="right"><label class="hand"><input name="bool2" type="checkbox" id="bool2" value="" class="input_check" />
+Yes</label></td>
+          </tr>
+          <tr>
+            <td>Assist you in handling disputed card    transactions.</td>
+            <td align="right"><label class="hand"><input name="bool3" type="checkbox" id="bool3" value="" class="input_check" />
+Yes</label></td>
+          </tr>
+          <tr>
+            <td>Give you a wide choice of report    templates</td>
+            <td align="right"><label class="hand"><input name="bool4" type="checkbox" id="bool4" value="" class="input_check" />
+Yes</label></td>
+          </tr>
+          <tr>
+            <td>Create     custom reports with the exact data you want</td>
+            <td align="right"><label class="hand"><input name="bool5" type="checkbox" id="bool5" value="" class="input_check" />
+Yes</label></td>
+          </tr>
+          <tr>
+            <td>Export reports into PDF, Word, Excel or    CSV formats</td>
+            <td align="right">
+			<label class="hand"><input name="bool6" type="checkbox" id="bool6" value="" class="input_check" /> Yes</label></td>
+          </tr>
+          <tr>
+            <td>Set up reports that are automatically    delivered to your email inbox</td>
+            <td align="right"><label class="hand"><input name="bool7" type="checkbox" id="bool7" value="" class="input_check" />
+Yes</label></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr>
+            <td><strong>Settlement time</strong></td>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr>
+            <td>How long does it    currently take to clear payments into your account?</td>
+            <td align="right"><input type="number" id="clear_pay" name="clear_pay" value="" class="input days" /> 
+            days </td>
+          </tr>
+          <tr>
+            <td>Would you pay a premium for faster    settlement?</td>
+            <td align="right">
+			<label class="hand"><input name="bool6" type="checkbox" id="bool6" value="" class="input_check" /> Yes</label>			</td>
+          </tr>
+          <tr>
+            <td>Would you consider slower payment in    return for lower charges?</td>
+            <td align="right">
+			<label class="hand"><input name="bool6" type="checkbox" id="bool6" value="" class="input_check" /> Yes</label>			</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr>
+            <td>General Information</td>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Who is your current    Merchant Service Provider?</td>
+            <td align="right">
+			<select name="merchant" id="merchant" class="input" >
+				<option value="Barclaycard" >Barclaycard</option>
+				<option value="Cardnet" >Cardnet</option>
+				<option value="Elavon" >Elavon</option>
+				<option value="First Data" >First Data</option>
+				<option value="globalpayments" >globalpayments</option>
+				<option value="Streamline" >Streamline</option>
+				<option value="Other" >Other</option>
+			</select>			</td>
+          </tr>
+          <tr>
+            <td>Approximately how many terminals do you require?</td>
+            <td align="right"><input type="number" id="clear payments22" name="clear payments22" value="" class="input num" /></td>
+          </tr>
+          <tr>
+            <td>How many sites do you operate from?</td>
+            <td align="right"><input type="number" id="clear payments23" name="clear payments23" value="" class="input num" /></td>
+          </tr>
+          <tr>
+            <td>If you require multiple merchant    accounts, how many?</td>
+            <td align="right"><input type="number" id="clear payments24" name="clear payments24" value="" class="input num" /></td>
+          </tr>
+          <tr>
+            <td>What is your business sector (e.g.    Hospitality, Retail, E-Comm)</td>
+            <td align="right"><input type="number" id="clear payments25" name="clear payments25" value="" class="input" /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr>
+            <th colspan="2">Calculated Results			</th>
+          </tr>
+          <tr>
+            <td colspan="2" align="center">Merchant Service Charges</td>
+          </tr>
+          <tr height="17">
+            <td height="17"><span class="lang lang_en">Merchant Service Charges</span></td>
+			<td align="right" class="result_box"><strong id="merch_charge_result">$52.00 </strong></td>
+          </tr>
+          <tr height="17">
+            <td height="17">DCC
+			<br/>
+			<span class="hint" id="msg2">...</span> </td>
+            <td align="right"><strong id="dcc">$00.0</strong> </td>
+          </tr>
+          <tr height="17">
+            <td height="17">
+			<br/>
+			<span class="hint" id="msg3">...</span>
+			</td>
+            <td align="right"><strong id="dcc_rate">$00.0</strong></td>
+          </tr>
+          <tr height="17">
+            <td height="17">Settlement time</td>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr height="17">
+            <td height="17"><span class="hint" id="msg4">...</span></td>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr height="17">
+            <td height="17">&nbsp;</td>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr height="17">
+            <td height="17">MIS</td>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr height="17">
+            <td height="17">
+			<span class="hint" id="msg5">...</span>
+			</td>
+            <td align="right">&nbsp;</td>
+          </tr>
+	  </table>
+</div>
+</body>
+</html>
