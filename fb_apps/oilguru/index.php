@@ -1,9 +1,10 @@
 <?php
 	
 	var_dump($_REQUEST);
-	var_dump($_REQUEST["signed_request"]);
 	
 	if(! empty($_REQUEST["signed_request"])) {
+		var_dump($_REQUEST["signed_request"]);
+
     	$data = parse_signed_request($_REQUEST["signed_request"]);
 		var_dump($data);
 		
