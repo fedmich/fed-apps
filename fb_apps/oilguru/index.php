@@ -1,5 +1,6 @@
 <?php
 	
+	error_reporting(E_ALL);
 	var_dump($_REQUEST);
 	
 	if(! empty($_REQUEST["signed_request"])) {
