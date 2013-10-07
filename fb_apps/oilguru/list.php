@@ -66,7 +66,7 @@
 		  <td align="center" class="jlist"><img src="img/companies/logo_williams.png" alt="" width="64" height="36" /></td>
 		    */ ?>
 			
-			<td width="20">
+			<td width="20" align="center">
 			<?=$ctr;?>
 			</td>
 			
