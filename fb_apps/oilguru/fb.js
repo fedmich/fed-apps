@@ -3,9 +3,6 @@ $(function() {
 	
 	$(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
 	
-	$('.job_tbl a').click(function(){
-		$('.like_gate').fadeIn('fast');
-	});
 	$('#close_gate').click(function(){
 		$('.like_gate').fadeOut('fast');
 	});
@@ -38,5 +35,13 @@ function load_jobs( cat , search ){
 		oTbl.html( data );
 
 		FB.Canvas.setAutoGrow();
+
+		if(! is_fan){
+			//LIKE Gate
+			$('.job_tbl a').click(function(){
+				$('.like_gate').fadeIn('fast');
+				return false;
+			});
+		}
 	});
 }

@@ -20,13 +20,8 @@
 		}
 
 		$data = parse_signed_request($_REQUEST["signed_request"]);
-		var_dump($data);
 
-	    if (empty($data["page"]["liked"])) {
-		echo 'fan';
-	} else {
-			echo 'not fan';
-	}
+		$is_fan = empty($data["page"]["liked"]) ? false : true;
 
 	}
 	
@@ -36,4 +31,9 @@
 	$content = str_replace( '.css"' , '.css?v=' . $ver . '"',$content);
 	$content = str_replace( '.js"' , '.js?v=' . $ver . '"',$content);
 	echo 'php';
+
+	if(! empty($is_fan)){
+		$content = str_replace( 'var is_fan = false', 'var is_fan = true',$content);
+	}
+
 	echo $content;
